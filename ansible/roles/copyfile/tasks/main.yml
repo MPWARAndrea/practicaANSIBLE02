@@ -1,0 +1,4 @@
+- name: copy file 1
+  copy: src=/ansible/roles/apache/tasks/main.yml dest=/tmp/copyapachemain.yml
+- name: copy file 2
+  copy: src=/ansible/roles/mysql/tasks/main.yml dest=/tmp/copymysqlmain.yml

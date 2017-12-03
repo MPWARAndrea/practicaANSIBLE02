@@ -9,7 +9,3 @@
     state: started 
     enabled: true
 
-- name: Set the root user for MYSQL
-  mysql_user: 
-    name: root 
-    password: {{ mysql_password }}
