@@ -1,0 +1,15 @@
+- name: Install data base mysql
+  yum: 
+    pkg: mysql-server 
+    state: present
+
+- name: Start the mysql services
+  service: 
+    name: mysqld 
+    state: started 
+    enabled: true
+
+- name: Set the root user for MYSQL
+  mysql_user: 
+    name: root 
+    password: {{ mysql_password }}

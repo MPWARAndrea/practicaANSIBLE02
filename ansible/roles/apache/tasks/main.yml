@@ -1,0 +1,8 @@
+- name: install Apache
+  yum: pkg=httpd state=present
+
+- name: create default HTML with SO version
+  template: src=templates/index.html dest=/home/vagrant/index_new.html
+
+- name: restart Apache
+  service: name=httpd state=restarted
